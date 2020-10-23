@@ -5,7 +5,7 @@
       </div>
       <form @submit.prevent="agregarTarea">
           <label for="tarea" class="label">Tarea</label>
-          <input type="text" v-model="tarea">
+          <input type="text" placeholder="Ingresa nueva tarea" v-model="tarea">
           <button type="submit" class="button">Crear</button>
       </form>
       <div v-if="tareas.length > 0">
@@ -13,7 +13,6 @@
               <li v-for="(task,index) in tareas" :key="index">{{task}}</li>
           </ul>
       </div>
-      
   </div>
 </template>
 
